@@ -4,6 +4,8 @@ public class Player {
 	private int balance;
 	private int limit;
 	
+	//Checking Name and Balance
+	
 	public Player(String name, int balance) {
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");

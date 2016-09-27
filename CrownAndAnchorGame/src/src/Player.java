@@ -25,7 +25,7 @@ public class Player {
 	}
 
 	public boolean balanceExceedsLimit() {
-		return (balance > limit);
+		return (balance < limit || balance ==limit);
 	}
 	
 	public boolean balanceExceedsLimitBy(int amount) {

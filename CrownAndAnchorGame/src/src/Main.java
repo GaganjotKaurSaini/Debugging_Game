@@ -54,8 +54,7 @@ public class Main {
                     if (winnings > 0) {
                     	int x = bet + player.getBalance();// Incrementing the win value - First scenario
                     	
-	                    System.out.printf("%s won %d, balance now %d\n\n",
-	                    		player.getName(), winnings, x);
+	                    System.out.printf("%s won %d, balance now %d\n\n",	player.getName(), winnings, x);
 	                    
 	                	winCount++; 
                     }

@@ -51,18 +51,21 @@ public class Player
 		return (balance - amount >= limit);  // Eradicated bug 2 now player reach to betting limit, game ends when balance goes 0
 	}
 	
-	public void takeBet(int bet) {
+	public void takeBet(int bet) 
+	{
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		if (!balanceExceedsLimitBy(bet)) throw new IllegalArgumentException("Placing bet would go below limit.");
 		balance = balance - bet;
 	}
 	
-	public void receiveWinnings(int winnings) {
+	public void receiveWinnings(int winnings) 
+	{
 		if (winnings < 0) throw new IllegalArgumentException("Winnings cannot be negative.");
 		balance = balance + winnings;		
 	}
 	
-	public String toString() {
+	public String toString() 
+	{
 		return String.format("Player: %s, Balance: %d, Limit: %d", name, balance, limit);
 	}
 }

@@ -21,7 +21,8 @@ public enum DiceValue {
 		return VALUE_REPR_MAP.get(value);
 	}
 	
-	public static DiceValue getRandom() {
+	public static DiceValue getRandom() 
+	{
 		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());
 		return values()[random];
 	}

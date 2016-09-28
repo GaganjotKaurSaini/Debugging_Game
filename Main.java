@@ -1,9 +1,11 @@
 import java.util.List;
 import java.io.*;
 
-public class Main {
+public class Main
+{
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception 
+	{
 		
 	   BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
 
@@ -61,7 +63,8 @@ public class Main {
 	                    		player.getName(), winnings, inc);
 	                	winCount++; 
                     }
-                    else {
+                    else
+		    {
                     	
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());

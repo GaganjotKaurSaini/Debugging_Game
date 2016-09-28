@@ -2,7 +2,7 @@ public class Dice
 {
 			
 	private DiceValue value;
-	
+	// declare various functions
 	public Dice() 
 	{
 		value =  DiceValue.getRandom();

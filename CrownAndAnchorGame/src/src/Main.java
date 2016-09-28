@@ -22,6 +22,7 @@ public class Main {
         {
             int winCount = 0;
             int loseCount = 0;
+            int betMoney = 0;
             
             for (int i = 0; i < 100; i++)
             {
@@ -51,9 +52,13 @@ public class Main {
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
                     
-                    if (winnings > 0) {
+                    //increasing balance when player wins
+                    
+                    if (winnings > 0) {  
+                    	int inc = betMoney + player.getBalance();
+                    	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
-	                    		player.getName(), winnings, player.getBalance());
+	                    		player.getName(), winnings, inc);
 	                	winCount++; 
                     }
                     else {

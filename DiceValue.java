@@ -2,13 +2,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public enum DiceValue {
+public enum DiceValue
+{
 	CROWN, ANCHOR, HEART, DIAMOND, CLUB, SPADE;
 	
 	private static Random RANDOM = new Random();
 	
 	private static final Map<DiceValue, String> VALUE_REPR_MAP= new HashMap<DiceValue, String>();
-	static {
+	static
+	{
 		VALUE_REPR_MAP.put(DiceValue.CROWN, "Crown");
 		VALUE_REPR_MAP.put(DiceValue.ANCHOR, "Anchor");
 		VALUE_REPR_MAP.put(DiceValue.HEART, "Heart");
@@ -17,7 +19,8 @@ public enum DiceValue {
 		VALUE_REPR_MAP.put(DiceValue.SPADE, "Spade");
 	}
 	
-	public String toString(DiceValue value) {
+	public String toString(DiceValue value) 
+	{
 		return VALUE_REPR_MAP.get(value);
 	}
 	

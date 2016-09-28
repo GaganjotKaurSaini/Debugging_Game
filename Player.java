@@ -1,12 +1,14 @@
 
-public class Player {
+public class Player
+{
 	private String name;
 	private int balance;
 	private int limit;
 	
 	//Checking Name and Balance of Player
 	
-	public Player(String name, int balance) {
+	public Player(String name, int balance) 
+	{
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
 		this.name = name;
@@ -16,11 +18,16 @@ public class Player {
 	
 	//Returning Name, Balance and limit of player
 		
-	public String getName() { 
-		return name; }
+	public String getName() 
+	{ 
+		return name; 
 	
-	public int getBalance() { 
-		return balance; }
+	}
+	
+	public int getBalance() 
+	{ 
+		return balance;
+	}
 	
 	public int getLimit() { 
 		return limit; }

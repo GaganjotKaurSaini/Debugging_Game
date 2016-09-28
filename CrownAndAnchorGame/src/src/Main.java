@@ -52,7 +52,7 @@ public class Main {
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
                     
-                    //increasing balance when player wins
+        //increasing balance when player wins
                     
                     if (winnings > 0) {  
                     	int inc = betMoney + player.getBalance();

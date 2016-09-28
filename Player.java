@@ -4,7 +4,7 @@ public class Player {
 	private int balance;
 	private int limit;
 	
-	//Checking Name and Balance
+	//Checking Name and Balance of Player
 	
 	public Player(String name, int balance) {
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
@@ -13,23 +13,31 @@ public class Player {
 		this.balance = balance;
 		this.limit = 0;
 	}
+	
+	//Returning Name, Balance and limit of player
 		
-	public String getName() { return name; }
-	public int getBalance() { return balance; }
-	public int getLimit() { return limit; }
+	public String getName() { 
+		return name; }
+	
+	public int getBalance() { 
+		return balance; }
+	
+	public int getLimit() { 
+		return limit; }
 	
 	public void setLimit(int limit) {
-		if (limit < 0) throw new IllegalArgumentException("Limit cannot be negative.");
+		if (limit < 0) throw new IllegalArgumentException("Limit cannot be negative.");   
 		if (limit > balance)  throw new IllegalArgumentException("Limit cannot be greater than balance.");
 		this.limit = limit;
 	}
 
 	public boolean balanceExceedsLimit() {
-		return (balance > limit);
+		return (balance >limit);
 	}
 	
-	public boolean balanceExceedsLimitBy(int amount) {
-		return (balance - amount > limit);
+	public boolean balanceExceedsLimitBy(int amount) 
+	{
+		return (balance - amount >= limit);  // Eradicated bug 2 now player reach to betting limit, game ends when balance goes 0
 	}
 	
 	public void takeBet(int bet) {

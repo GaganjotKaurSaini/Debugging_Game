@@ -29,16 +29,20 @@ public class Player
 		return balance;
 	}
 	
-	public int getLimit() { 
-		return limit; }
+	public int getLimit() 
+	{ 
+		return limit; 
+	}
 	
-	public void setLimit(int limit) {
+	public void setLimit(int limit)
+	{
 		if (limit < 0) throw new IllegalArgumentException("Limit cannot be negative.");   
 		if (limit > balance)  throw new IllegalArgumentException("Limit cannot be greater than balance.");
 		this.limit = limit;
 	}
 
-	public boolean balanceExceedsLimit() {
+	public boolean balanceExceedsLimit()
+	{
 		return (balance >limit);
 	}
 	

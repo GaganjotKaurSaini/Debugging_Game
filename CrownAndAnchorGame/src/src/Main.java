@@ -11,7 +11,7 @@ public class Main {
         Dice d2 = new Dice();
         Dice d3 = new Dice();
 
-        Player player = new Player("Fred", 200);
+        Player player = new Player("Fred", 100);
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
@@ -62,6 +62,7 @@ public class Main {
 	                	winCount++; 
                     }
                     else {
+                    	
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());
 	                	loseCount++;

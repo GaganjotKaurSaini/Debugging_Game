@@ -55,10 +55,10 @@ public class Main {
         //increasing balance when player wins
                     
                     if (winnings > 0) {  
-                    	int inc = betMoney + winnings + player.getBalance(); //Adding winnings ()
+                    	int x = bet + winnings + player.getBalance(); //Adding winnings ()
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
-	                    		player.getName(), winnings, inc);
+	                    		player.getName(), winnings, x);
 	                	winCount++; 
                     }
                     else {

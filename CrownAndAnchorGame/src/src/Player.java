@@ -37,7 +37,7 @@ public class Player {
 	
 	public boolean balanceExceedsLimitBy(int amount) 
 	{
-		return (balance - amount >= limit);  // Eradicated bug 2 now player reach to betting limit, game ends when balance goes 0
+		return (balance - amount >= limit);  //Eradicated bug 2 now player reach to betting limit, game ends when balance goes 0
 	}
 	
 	public void takeBet(int bet) {

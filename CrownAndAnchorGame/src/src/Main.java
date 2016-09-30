@@ -69,11 +69,10 @@ public class Main {
                     }
                     
                 } //while
-                  //Getting right winCounts
+                  //Eradicate bug 3, Getting right winCounts
                 System.out.print(String.format("%d turns later.\nEnd Game %d: ", turn, i));
                 System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
-                
-            } //for
+                }
             
             System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
             totalWins += winCount;

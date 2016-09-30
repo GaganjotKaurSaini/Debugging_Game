@@ -11,7 +11,7 @@ public class Main {
         Dice d2 = new Dice();
         Dice d3 = new Dice();
 
-        Player player = new Player("Fred", 100);
+        Player player = new Player("Fred", 19, 100);
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
@@ -27,9 +27,10 @@ public class Main {
             for (int i = 0; i < 100; i++)
             {
             	String name = "Fred";
+            	int age = 19;
             	int balance = 100;
             	int limit = 0;
-                player = new Player(name, balance);
+                player = new Player(name, age, balance);
                 player.setLimit(limit);
                 int bet = 5;
 

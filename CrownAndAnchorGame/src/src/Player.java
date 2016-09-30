@@ -3,21 +3,27 @@ public class Player {
 	private String name;
 	private int balance;
 	private int limit;
+	private int age; //declaring age of int type
 	
 	//Checking Name and Balance of Player
 	
-	public Player(String name, int balance) {
+	public Player(String name, int age, int balance) {
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
+		if(age < 18) throw new IllegalArgumentException("Under 18 should not play the game");
 		this.name = name;
 		this.balance = balance;
 		this.limit = 0;
+		this.age=0;
 	}
 	
 	//Returning Name, Balance and limit of player
 		
 	public String getName() { 
 		return name; }
+	
+	public int age() { 
+		return age; }	
 	
 	public int getBalance() { 
 		return balance; }

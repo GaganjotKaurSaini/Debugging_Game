@@ -7,7 +7,10 @@ public enum DiceValue {
 	
 	private static Random RANDOM = new Random();
 	
-	private static final Map<DiceValue, String> VALUE_REPR_MAP= new HashMap<DiceValue, String>();
+	private static final Map<DiceValue, String> 
+	
+	VALUE_REPR_MAP= new HashMap<DiceValue, String>();
+	
 	static {
 		VALUE_REPR_MAP.put(DiceValue.CROWN, "Crown");
 		VALUE_REPR_MAP.put(DiceValue.ANCHOR, "Anchor");
@@ -23,7 +26,8 @@ public enum DiceValue {
 	
 	public static DiceValue getRandom() {
 		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());
-		return values()[random];
+					
+		return values()[random]; //returns random dice values
 	}
 	
 }

@@ -55,7 +55,8 @@ public class Main {
                     
         //increasing balance when player wins
                     
-                    if (winnings > 0) {  
+                    if (winnings > 0)
+                    {  
                     	int x = bet + winnings + player.getBalance(); //Adding winnings ()
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",

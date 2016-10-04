@@ -18,18 +18,12 @@ public enum DiceValue {
 		VALUE_REPR_MAP.put(DiceValue.DIAMOND, "Diamond");
 		VALUE_REPR_MAP.put(DiceValue.CLUB, "Club");
 		VALUE_REPR_MAP.put(DiceValue.SPADE, "Spade");
-	}
-	
+	}	
 	public String toString(DiceValue value) {
 		return VALUE_REPR_MAP.get(value);
-	}
-	
-	public static DiceValue getRandom() {
-		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());
-		return values()[random]; //returns random dice values
 	}	
-
-
-
+	public static DiceValue getRandom() {
+		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());		
+		return values()[random]; //returns random dice values		
+	}	
 }
-

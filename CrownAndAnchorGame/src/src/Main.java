@@ -6,7 +6,7 @@ public class Main
 	public static void main(String[] args) throws Exception {
 		
 	   BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
-
+	   
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
@@ -21,13 +21,12 @@ public class Main
 
         int totalWins = 0;
         int totalLosses = 0;
-
+        
         while (true)
         {
             int winCount = 0;
             int loseCount = 0;
-            int betMoney = 0;
-            int wincount = 0;
+            //int betMoney = 0;            
             
             for (int i = 0; i < 100; i++)
             {
@@ -53,21 +52,16 @@ public class Main
                 			turn, player.getName(), bet, pick); 
                 	
                 	int winnings = game.playRound(player, pick, bet);
-                    cdv = game.getDiceValues();
+                    cdv = game.getDiceValues();                    
                     
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2)); // add cdv
                     
         //increasing balance when player wins
-                    /*if (wincount > 0.42)
-                    {
-                    	System.out.printf("Rolled %s, %s, %s\n",
-                        		cdv.get(0), cdv.get(1), cdv.get(2));         	
-                    }   */                      
                     
                  if (winnings > 0)
-                    {  
-                    	int x = bet + winnings + player.getBalance(); //Adding winnings ()
+                    {                 	 
+                	 int x = bet + winnings + player.getBalance(); //Adding winnings ()
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, x);
@@ -77,8 +71,8 @@ public class Main
                     	
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());
-	                	loseCount++;
-                    }
+	                	loseCount++;	                		                		                	
+                    }                                
                     
                 } //while checking bugs
                   //Eradicate bug 3, Getting right winCounts
@@ -95,5 +89,5 @@ public class Main
         } //while true
         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
-	}
+	}	
 }

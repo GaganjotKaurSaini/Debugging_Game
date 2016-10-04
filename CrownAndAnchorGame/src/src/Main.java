@@ -20,9 +20,8 @@ public class Main
         List<DiceValue> cdv = game.getDiceValues();
 
         int totalWins = 0;
-        int totalLosses = 0;
-        float wincount = 0;
-        
+        int totalLosses = 0;    
+        float countWin = 0;
         while (true)
         {
             int winCount = 0;
@@ -87,8 +86,7 @@ public class Main
 
             String ans = console.readLine();
             if (ans.equals("q")) break;
-        } //while true
-       
+        } //while true       
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
-		}	
-}
+                     	}		
+	}

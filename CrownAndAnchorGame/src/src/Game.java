@@ -7,16 +7,30 @@ public class Game {
 	private List<Dice> dice;
 	private List<DiceValue> values;
 	
+<<<<<<< HEAD
 	public Game(Dice die1, Dice die2, Dice die3 ) {
 		if (die1 == null || die2 == null || die3 == null   ) throw new IllegalArgumentException("Dice cannot be null.");
+=======
+	// Adding 3 more dice parameters
+	
+	public Game(Dice die1, Dice die2, Dice die3, Dice die4, Dice die5, Dice die6) 
+	{
+		if (die1 == null || die2 == null || die3 == null || die4 == null || die5 == null || die6 == null) throw new IllegalArgumentException("Dice cannot be null.");
+>>>>>>> origin/master
 		dice = new ArrayList<Dice>();
 		dice.add(die1);
 		dice.add(die2);
 		dice.add(die3);
+<<<<<<< HEAD
 /*		dice.add(die4);
 		dice.add(die5);
 		dice.add(die6);   */ 
 		
+=======
+		dice.add(die4);   //Add 3 more dices
+		dice.add(die5);
+		dice.add(die6);
+>>>>>>> origin/master
 		values = new ArrayList<DiceValue>();
 	}
 

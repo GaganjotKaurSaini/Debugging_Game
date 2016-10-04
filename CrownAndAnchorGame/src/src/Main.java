@@ -11,12 +11,19 @@ public class Main
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
+<<<<<<< HEAD
      /*   Dice d4 = new Dice(); // add new dice
         Dice d5 = new Dice();  // add new dice
         Dice d6 = new Dice();   // add new dice    */
+=======
+        //Adding 3 more dices
+        Dice d4 = new Dice();  
+        Dice d5 = new Dice();
+        Dice d6 = new Dice();
+>>>>>>> origin/master
 
         Player player = new Player("Fred", 19, 100);
-        Game game = new Game(d1, d2, d3);
+        Game game = new Game(d1, d2, d3, d4, d5, d6);
         List<DiceValue> cdv = game.getDiceValues();
 
         int totalWins = 0;

@@ -15,7 +15,8 @@ public class Dice {
 		return DiceValue.getRandom(); //return diceValue randomly
 	}		
 	
-	public String toString() {
+	public String toString()  // checking
+	{
 		return value.toString();
 	}
 }

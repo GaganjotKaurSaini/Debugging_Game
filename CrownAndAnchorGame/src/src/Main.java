@@ -21,6 +21,7 @@ public class Main
 
         int totalWins = 0;
         int totalLosses = 0;
+        float wincount = 0;
         
         while (true)
         {
@@ -87,7 +88,7 @@ public class Main
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } //while true
-        
+       
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
-	}	
+		}	
 }

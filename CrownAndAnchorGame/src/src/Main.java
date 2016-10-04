@@ -61,7 +61,7 @@ public class Main
                     
                  if (winnings > 0)
                     {                 	 
-                	 int x = bet + player.getBalance(); //eradicated bug, now player balance increases on wins
+                	 int x = bet + winnings+ player.getBalance(); //eradicated bug, now player balance increases on wins
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, x);

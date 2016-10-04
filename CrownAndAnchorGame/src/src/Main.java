@@ -11,6 +11,9 @@ public class Main
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
+     /*   Dice d4 = new Dice(); // add new dice
+        Dice d5 = new Dice();  // add new dice
+        Dice d6 = new Dice();   // add new dice    */
 
         Player player = new Player("Fred", 19, 100);
         Game game = new Game(d1, d2, d3);
@@ -52,7 +55,7 @@ public class Main
                     cdv = game.getDiceValues();
                     
                     System.out.printf("Rolled %s, %s, %s\n",
-                    		cdv.get(0), cdv.get(1), cdv.get(2)); // add cdv
+                    		cdv.get(0), cdv.get(1), cdv.get(2) ); 
                     
         //increasing balance when player wins
                     

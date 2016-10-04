@@ -28,4 +28,8 @@ public enum DiceValue {
 		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());			
 		return values()[random]; //returns random dice values
 	}	
+
+
+
 }
+

@@ -14,7 +14,7 @@ public class Player {
 		this.name = name;
 		this.balance = balance;
 		this.limit = 0;
-		this.age=0;
+		this.age=0;      //testing
 	}
 	
 	//Returning Name, Balance and limit of player

@@ -14,7 +14,7 @@ public class Main
        /* Dice d4 = new Dice();  
         Dice d5 = new Dice();
         Dice d6 = new Dice();*/
-
+        
         Player player = new Player("Fred", 19, 100);
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
@@ -22,11 +22,13 @@ public class Main
         int totalWins = 0;
         int totalLosses = 0;    
         //float countWin = 0;
+                
         while (true)
         {
             int winCount = 0;
             int loseCount = 0;
-            int betMoney = 0;            
+            int betMoney = 0;  
+            
             
             for (int i = 0; i < 100; i++)
             {
@@ -43,7 +45,7 @@ public class Main
                 		player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
-                while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)// Eradicated bug sets the limit 100
+                while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 200)// Eradicated bug sets the limit 200
                 {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
@@ -56,8 +58,9 @@ public class Main
                     
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
+                                       
                     
-        //increasing balance when player wins
+                    //increasing balance when player wins
                                       
                     if (winnings > 0)
                     {                 	 
@@ -86,7 +89,19 @@ public class Main
 
             String ans = console.readLine();
             if (ans.equals("q")) break;
-        } 
+         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalWins  / (totalWins + totalLosses))*100)));
-                     	}		
+	   
+        
+        //Win Count Limit
+        float abc = ((totalWins  / (totalWins + totalLosses))*100);
+        if(abc >= 0.42)
+	   {
+		   System.out.println("Limit reached");	   
+	   }
+	   else
+	   {
+		   System.out.println("Proceed");
+	   }
+	}    }          			
 	}

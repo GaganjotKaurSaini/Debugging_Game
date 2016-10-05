@@ -26,9 +26,7 @@ public class Main
         while (true)
         {
             int winCount = 0;
-            int loseCount = 0;
-            int betMoney = 0;  
-            
+            int loseCount = 0;            
             
             for (int i = 0; i < 100; i++)
             {
@@ -57,8 +55,7 @@ public class Main
                     cdv = game.getDiceValues();                    
                     
                     System.out.printf("Rolled %s, %s, %s\n",
-                    		cdv.get(0), cdv.get(1), cdv.get(2));
-                                       
+                    		cdv.get(0), cdv.get(1), cdv.get(2));                                       
                     
                     //increasing balance when player wins
                                       
@@ -92,16 +89,6 @@ public class Main
         } 
         System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalWins  / (totalWins + totalLosses))*100)));
 	   
-        
         //Win Count Limit
-        float abc = ((totalWins  / (totalWins + totalLosses))*100);
-        if(abc >= 0.42)
-	   {
-		   System.out.println("Limit reached");	   
-	   }
-	   else
-	   {
-		   System.out.println("Proceed");
-	   }
-	}              			
+       	}              			
 	}

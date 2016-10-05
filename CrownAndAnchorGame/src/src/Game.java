@@ -52,5 +52,4 @@ public class Game {
 		}
         return winnings;		
 	}
-	
 }

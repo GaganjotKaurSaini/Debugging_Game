@@ -21,7 +21,7 @@ public class Main
 
         int totalWins = 0;
         int totalLosses = 0;    
-        float countWin = 0;
+        //float countWin = 0;
         while (true)
         {
             int winCount = 0;
@@ -58,8 +58,8 @@ public class Main
                     		cdv.get(0), cdv.get(1), cdv.get(2)); // add cdv
                     
         //increasing balance when player wins
-                    
-                 if (winnings > 0)
+                                      
+                    if (winnings > 0)
                     {                 	 
                 	 int x = bet + winnings + player.getBalance(); //Adding winnings ()
                     	
@@ -72,7 +72,7 @@ public class Main
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());
 	                	loseCount++;	                		                		                	
-                    }                                
+                    }                               
                     
                 } //while checking bugs
                   //Eradicate bug 3, Getting right winCounts

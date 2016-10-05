@@ -2,6 +2,7 @@
 public class Player {
 	private String name;
 	private int balance;
+	private int winnings;
 	private int limit;
 	private int age; //declaring age of type int
 	
@@ -15,10 +16,11 @@ public class Player {
 		if(age < 18) throw new IllegalArgumentException("Under 18 should not play the game");
 		this.name = name;
 		this.balance = balance;
+		this.winnings = winnings;
 		this.limit = 0;
 		this.age=age;      //testing
 		}	
-	//Returning Name, Balance and limit of player
+	//Returning Name, age, Balance and limit of player
 		
 	public String getName() { 
 		return name; }
@@ -28,6 +30,9 @@ public class Player {
 	
 	public int getBalance() { 
 		return balance; }
+	
+	public int getWinnings() {
+		return winnings; }
 	
 	public int getLimit() { 
 		return limit; }
@@ -59,6 +64,6 @@ public class Player {
 	}
 	
 	public String toString() {
-		return String.format("Player: %s, Balance: %d, Limit: %d", name, balance, limit);
+		return String.format("Player: %s, Balance: %d, Limit: %d, winnings: %d", name, balance, limit, winnings);
 	}
 }

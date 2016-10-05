@@ -56,7 +56,7 @@ public class Player {
 	public void takeBet(int bet) {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		if (!balanceExceedsLimitBy(bet)) throw new IllegalArgumentException("Placing bet would go below limit.");
-		balance = balance - bet;
+		balance = balance + bet;
 	}
 		
 	public void receiveWinnings(int winnings) {

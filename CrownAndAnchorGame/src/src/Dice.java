@@ -8,6 +8,8 @@ public class Dice {
 	
 	public DiceValue getValue()
 	{
+		
+		
 		return value;
 	}
 

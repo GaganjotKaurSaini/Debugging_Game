@@ -4,8 +4,8 @@ public class Player {
 	private int balance;
 	private int winnings;
 	private int limit;
-	private int age; //declaring age of type int
-	
+	private int age;
+		
 	//Checking Name and Balance of Player
 	
 	public Player(String name, int age, int balance) {
@@ -16,7 +16,6 @@ public class Player {
 		if(age < 18) throw new IllegalArgumentException("Under 18 should not play the game");
 		this.name = name;
 		this.balance = balance;
-		this.winnings = winnings;
 		this.limit = 0;
 		this.age=age;      //testing
 		}	
@@ -57,13 +56,13 @@ public class Player {
 		if (!balanceExceedsLimitBy(bet)) throw new IllegalArgumentException("Placing bet would go below limit.");
 		balance = balance - bet;
 	}
-	
+		
 	public void receiveWinnings(int winnings) {
 		if (winnings < 0) throw new IllegalArgumentException("Winnings cannot be negative.");
 		balance = balance + winnings ;		
 	}
 	
 	public String toString() {
-		return String.format("Player: %s, Balance: %d, Limit: %d, winnings: %d", name, balance, limit, winnings);
+		return String.format("Player: %s, Balance: %d, Limit: %d", name, balance, limit);
 	}
 }

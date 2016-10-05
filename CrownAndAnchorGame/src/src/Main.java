@@ -64,7 +64,7 @@ public class Main
                                       
                     if (winnings > 0)
                     {                 	 
-                	 int x = bet + winnings + player.getBalance(); //eradicated bug, now player balance increases  wins
+                	 int x = bet + winnings + player.getBalance(); //eradicated bug, now player balance increases when wins
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, x);
@@ -89,7 +89,7 @@ public class Main
 
             String ans = console.readLine();
             if (ans.equals("q")) break;
-         
+        } 
         System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalWins  / (totalWins + totalLosses))*100)));
 	   
         
@@ -103,5 +103,5 @@ public class Main
 	   {
 		   System.out.println("Proceed");
 	   }
-	}    }          			
+	}              			
 	}

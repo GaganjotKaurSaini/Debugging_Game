@@ -10,12 +10,13 @@ public class Player {
 	public Player(String name, int age, int balance) {
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
+	
 		//Under 18 cannot play this game
 		if(age < 18) throw new IllegalArgumentException("Under 18 should not play the game");
 		this.name = name;
 		this.balance = balance;
 		this.limit = 0;
-		this.age=0;      //testing
+		this.age=0;    
 		}	
 	//Returning Name, Balance and limit of player
 		

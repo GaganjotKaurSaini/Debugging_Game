@@ -3,7 +3,7 @@ public class Player {
 	private String name;
 	private int balance;
 	private int limit;
-	private int age; //declaring age of type int
+	private int age; 
 	
 	//Checking Name and Balance of Player
 	

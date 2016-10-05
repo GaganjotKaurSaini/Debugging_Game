@@ -26,7 +26,7 @@ public class Main
         {
             int winCount = 0;
             int loseCount = 0;
-            //int betMoney = 0;            
+            int betMoney = 0;            
             
             for (int i = 0; i < 100; i++)
             {
@@ -55,13 +55,13 @@ public class Main
                     cdv = game.getDiceValues();                    
                     
                     System.out.printf("Rolled %s, %s, %s\n",
-                    		cdv.get(0), cdv.get(1), cdv.get(2)); // add cdv
+                    		cdv.get(0), cdv.get(1), cdv.get(2));
                     
         //increasing balance when player wins
                                       
                     if (winnings > 0)
                     {                 	 
-                	 int x = bet + winnings + player.getBalance(); //Adding winnings ()
+                	 int x = bet + winnings + player.getBalance(); //eradicated bug, now player balance increases  wins
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, x);
@@ -86,7 +86,7 @@ public class Main
 
             String ans = console.readLine();
             if (ans.equals("q")) break;
-        } //while true       
-        System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
+        } 
+        System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalWins  / (totalWins + totalLosses))*100)));
                      	}		
 	}

@@ -8,6 +8,8 @@ public class Dice {
 	
 	public DiceValue getValue()
 	{
+		
+		
 		return value;
 	}
 
@@ -15,7 +17,8 @@ public class Dice {
 		return DiceValue.getRandom(); //return diceValue randomly
 	}		
 	
-	public String toString() {
+	public String toString()  
+	{
 		return value.toString();
 	}
 }

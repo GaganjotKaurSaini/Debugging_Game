@@ -40,8 +40,12 @@ public class Main
                 		player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
+
                 								// Eradicated bug sets the limit less than and equals to 100
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)
+
+                while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)// Eradicated bug sets the limit 100
+
                 {
                  //   turn++;                    
                 	DiceValue pick = DiceValue.getRandom();

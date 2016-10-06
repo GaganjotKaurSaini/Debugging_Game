@@ -48,7 +48,6 @@ public class Player {
 	
 	public boolean balanceExceedsLimitBy(int amount) 
 	{
-		
 		//Eradicated bug 2 now player reach to betting limit, game ends when balance goes 0
 		return (balance - amount >= limit);  
 	}
@@ -56,12 +55,12 @@ public class Player {
 	public void takeBet(int bet) {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		if (!balanceExceedsLimitBy(bet)) throw new IllegalArgumentException("Placing bet would go below limit.");
-		balance = balance + bet;
+		balance = balance - bet;
 	}
 		
 	public void receiveWinnings(int winnings) {
 		if (winnings < 0) throw new IllegalArgumentException("Winnings cannot be negative.");
-		balance = balance - winnings ;		
+		balance = balance + winnings ;		
 	}
 	
 	public String toString() {

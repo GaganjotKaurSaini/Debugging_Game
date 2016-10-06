@@ -18,7 +18,7 @@ public class Player {
 		this.limit = 0;
 		this.age=age;      //testing
 		}	
-	//Returning Name, Balance and limit of player
+	//Returning Name, age, Balance and limit of player
 		
 	public String getName() { 
 		return name; }

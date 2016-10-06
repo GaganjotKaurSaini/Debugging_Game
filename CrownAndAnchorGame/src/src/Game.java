@@ -5,15 +5,10 @@ import java.util.ArrayList;
 public class Game {
 
 	private List<Dice> dice;
-	private List<DiceValue> values;
-	
-
-	
+	private List<DiceValue> values;	
 
 	 int totalWins = 0;
-     int totalLosses = 0; 
-	
-	
+     int totalLosses = 0; 	
 	
 	public Game(Dice die1, Dice die2, Dice die3) 
 	{
@@ -41,27 +36,15 @@ public class Game {
 		
 		player.takeBet(bet);
 		
-		int winnings=0;
 		int matches = 0;
-		Dice d1 = new Dice();
-        Dice d2 = new Dice();
-        Dice d3 = new Dice();
-		Game game = new Game(d1,d2,d3);
-		player.receiveWinnings(winnings);
-	    winnings = game.playRound(player, pick, bet);
-		 matches = totalWins + totalLosses;
-		float twc = (totalWins  / matches)*100;
-		
 		for ( Dice d : dice) {
 			d.roll();
-			if (d.getValue().equals(pick) && twc>= 0.42) { 
+			if (d.getValue().equals(pick)) { 
 				matches += 1;
-	      }		
-			//else if (twc>= 0.42) {
-			//d.getValue().equals(pick);
-		//}		
+	      }				
 		}
-	 winnings = matches * bet;
+		
+	 int winnings = matches * (bet * matches);
 
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);

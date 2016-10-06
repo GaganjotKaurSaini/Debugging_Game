@@ -21,12 +21,12 @@ public class Main
 
         int totalWins = 0;
         int totalLosses = 0;    
-        float countWin = 0;
+        //float countWin = 0;
         while (true)
         {
             int winCount = 0;
             int loseCount = 0;
-            int betMoney = 0;            
+            //int betMoney = 0;            
             
             for (int i = 0; i < 100; i++)
             {
@@ -56,6 +56,7 @@ public class Main
                     
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
+			
                     
         //increasing balance when player wins
                                       

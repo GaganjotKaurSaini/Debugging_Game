@@ -1,4 +1,3 @@
-
 public class Player {
 	private String name;
 	private int balance;
@@ -6,8 +5,7 @@ public class Player {
 	private int limit;
 	private int age;
 		
-	//Checking Name and Balance of Player
-	
+	//Checking Name and Balance of Player	
 	public Player(String name, int age, int balance) {
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
@@ -63,6 +61,11 @@ public class Player {
 		balance = balance + winnings ;		
 	}
 	
+	public void winCounts(float totalWinCounts)
+	{	
+		if (totalWinCounts >= 0.42) throw new IllegalArgumentException("Limit reached.");
+		balance = balance + winnings ;
+	}
 	public String toString() {
 		return String.format("Player: %s, Balance: %d, Limit: %d", name, balance, limit);
 	}

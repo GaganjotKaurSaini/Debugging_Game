@@ -41,30 +41,30 @@ public class Game {
 		
 		player.takeBet(bet);
 		
-		int winnings=0;
-		int matches = 0;
-		Dice d1 = new Dice();
-        Dice d2 = new Dice();
-        Dice d3 = new Dice();
+		//int winnings=0;
+		
+		//Dice d1 = new Dice();
+        //Dice d2 = new Dice();
+        /*Dice d3 = new Dice();
 		Game game = new Game(d1,d2,d3);
 		player.receiveWinnings(winnings);
 	    winnings = game.playRound(player, pick, bet);
 		 matches = totalWins + totalLosses;
-		float twc = (totalWins  / matches)*100;
+		float twc = (totalWins  / matches)*100;*/
 		
+		int matches = 0;
 		for ( Dice d : dice) {
 			d.roll();
-			if (d.getValue().equals(pick) && twc>= 0.42) { 
+			if (d.getValue().equals(pick)) { 
 				matches += 1;
-	      }		
-			//else if (twc>= 0.42) {
-			//d.getValue().equals(pick);
-		//}		
+	      }				
 		}
-	 winnings = matches * bet;
+		
+	 int winnings = matches * bet;
 
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
+			int x = bet + winnings + player.getBalance();
 		}
         return winnings;		
 	}

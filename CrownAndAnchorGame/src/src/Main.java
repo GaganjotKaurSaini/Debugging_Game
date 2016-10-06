@@ -9,8 +9,7 @@ public class Main
 	   
         Dice d1 = new Dice();
         Dice d2 = new Dice();
-        Dice d3 = new Dice();
-      
+        Dice d3 = new Dice();      
         
         Player player = new Player("Fred", 19, 100);
         Game game = new Game(d1, d2, d3);
@@ -28,26 +27,25 @@ public class Main
             for (int i = 0; i < 100; i++)
             {
             	String name = "Fred";
-            	int age = 19;
+            	int age = 17;
             	int balance = 100;
             	int limit = 0;
                 player = new Player(name, age, balance);
                 player.setLimit(limit);
-                int bet = -5;
+                int bet = 5;
 
                 System.out.println(String.format("Start Game %d: ", i));
                 System.out.println(String.format("%s starts with balance %d, limit %d", 
                 		player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
-
                 								// Eradicated bug sets the limit less than and equals to 100
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)
 
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)// Eradicated bug sets the limit 100
 
                 {
-                 //   turn++;                    
+                   turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
                    
                 	System.out.printf("Turn %d: %s bet %d on %s\n",

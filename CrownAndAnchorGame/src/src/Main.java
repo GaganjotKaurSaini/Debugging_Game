@@ -62,7 +62,11 @@ public class Main
                                       
                     if (winnings > 0)
                     {                 	 
+<<<<<<< HEAD
                 	 int x = bet + player.getBalance(); //eradicated bug, now player balance increases on win
+=======
+                	 int x = bet + winnings + player.getBalance(); //eradicated bug, now player balance increases  wins
+>>>>>>> origin/master
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, x);
@@ -80,6 +84,7 @@ public class Main
                 System.out.print(String.format("%d turns later.\nEnd Game %d: ", turn, i));
                 System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
                 }
+		
             
             System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
             totalWins += winCount;

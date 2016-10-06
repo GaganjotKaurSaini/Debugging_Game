@@ -61,6 +61,11 @@ public class Player {
 		balance = balance + winnings ;		
 	}
 	
+	public void winCounts(float totalWinCounts)
+	{	
+		if (totalWinCounts >= 0.42) throw new IllegalArgumentException("Limit reached.");
+		balance = balance + winnings ;
+	}
 	public String toString() {
 		return String.format("Player: %s, Balance: %d, Limit: %d", name, balance, limit);
 	}

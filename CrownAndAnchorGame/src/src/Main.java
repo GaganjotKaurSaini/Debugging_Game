@@ -33,7 +33,7 @@ public class Main
             	int limit = 0;
                 player = new Player(name, age, balance);
                 player.setLimit(limit);
-                int bet = 5;
+                int bet = -5;
 
                 System.out.println(String.format("Start Game %d: ", i));
                 System.out.println(String.format("%s starts with balance %d, limit %d", 
@@ -72,8 +72,7 @@ public class Main
 	                    		player.getName(), winnings, x);
 	                	winCount++;	                	
                     }                    
-                    else {
-                    	
+                    else {                    	
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());
 	                	loseCount++;	                		                		                	

@@ -1,24 +1,22 @@
-public class Dice
-{
+public class Dice {
 			
 	private DiceValue value;
-	// declare various functions
-	public Dice() 
-	{
+	
+	public Dice() {
 		value =  DiceValue.getRandom();
 	}
 	
-	public DiceValue getValue() 
-	{
+	public DiceValue getValue()
+	{		
+		
 		return value;
 	}
 
-	public DiceValue roll() 
-	{
+	public DiceValue roll() {
 		return DiceValue.getRandom(); //return diceValue randomly
 	}		
 	
-	public String toString() 
+	public String toString()  
 	{
 		return value.toString();
 	}

@@ -7,7 +7,7 @@ public class Game {
 	private List<Dice> dice;
 	private List<DiceValue> values;
 	
-	// Adding 3 more dice parameters
+	
 	
 	public Game(Dice die1, Dice die2, Dice die3) 
 	{
@@ -16,9 +16,7 @@ public class Game {
 		dice.add(die1);
 		dice.add(die2);
 		dice.add(die3);
-	  /*dice.add(die4);   //Add 3 more dices
-		dice.add(die5);
-		dice.add(die6);*/
+	  
 		values = new ArrayList<DiceValue>();
 	}
 

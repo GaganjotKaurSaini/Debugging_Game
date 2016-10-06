@@ -10,10 +10,7 @@ public class Main
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
-        //Adding 3 more dices
-       /* Dice d4 = new Dice();  
-        Dice d5 = new Dice();
-        Dice d6 = new Dice();*/
+      
         
         Player player = new Player("Fred", 19, 100);
         Game game = new Game(d1, d2, d3);

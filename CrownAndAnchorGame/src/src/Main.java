@@ -10,20 +10,23 @@ public class Main
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
-      
-        
+        //Adding 3 more dices
+       /* Dice d4 = new Dice();  
+        Dice d5 = new Dice();
+        Dice d6 = new Dice();*/
+
         Player player = new Player("Fred", 19, 100);
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
         int totalWins = 0;
         int totalLosses = 0;    
-        //float countWin = 0;
-                
+        float countWin = 0;
         while (true)
         {
             int winCount = 0;
-            int loseCount = 0;            
+            int loseCount = 0;
+            int betMoney = 0;            
             
             for (int i = 0; i < 100; i++)
             {
@@ -40,34 +43,25 @@ public class Main
                 		player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
-
-                								// Eradicated bug sets the limit less than and equals to 100
-                while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)
-
-              //  while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)// Eradicated bug sets the limit 100
-
+                while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)// Eradicated bug sets the limit 100
                 {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
                    
                 	System.out.printf("Turn %d: %s bet %d on %s\n",
                 			turn, player.getName(), bet, pick); 
-                	                	
-                	
-                	
-                			 
                 	
                 	int winnings = game.playRound(player, pick, bet);
                     cdv = game.getDiceValues();                    
                     
                     System.out.printf("Rolled %s, %s, %s\n",
-                    		cdv.get(0), cdv.get(1), cdv.get(2));                                       
+                    		cdv.get(0), cdv.get(1), cdv.get(2));
                     
-                    //increasing balance when player wins
+        //increasing balance when player wins
                                       
                     if (winnings > 0)
                     {                 	 
-                	 int x = bet + winnings + player.getBalance(); //eradicated bug 1, now player balance increases when wins
+                	 int x = bet + winnings + player.getBalance(); //eradicated bug, now player balance increases  wins
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, x);
@@ -94,7 +88,5 @@ public class Main
             if (ans.equals("q")) break;
         } 
         System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalWins  / (totalWins + totalLosses))*100)));
-	   
-        //Win Count Limit
-       	}              			
+                     	}		
 	}

@@ -44,7 +44,7 @@ public class Main
                 								// Eradicated bug sets the limit less than and equals to 100
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)
 
-                while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)// Eradicated bug sets the limit 100
+              //  while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)// Eradicated bug sets the limit 100
 
                 {
                     turn++;                    
@@ -53,9 +53,9 @@ public class Main
                 	System.out.printf("Turn %d: %s bet %d on %s\n",
                 			turn, player.getName(), bet, pick); 
                 	                	
-                	DiceValue pick2 = DiceValue.getRandom();
-                	System.out.printf("Turn %d: %s bet %d on %s\n",
-                			turn, player.getName(), bet, pick2); 
+                	
+                	
+                			 
                 	
                 	int winnings = game.playRound(player, pick, bet);
                     cdv = game.getDiceValues();                    

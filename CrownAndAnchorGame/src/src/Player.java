@@ -6,7 +6,8 @@ public class Player {
 	private int age;
 		
 	//Checking Name and Balance of Player	
-	public Player(String name, int age, int balance) {
+	public Player(String name, int age, int balance)
+	{
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
 		

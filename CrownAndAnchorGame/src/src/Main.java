@@ -64,7 +64,7 @@ public class Main
                     {                 	 
 
                 	 int x = bet + player.getBalance(); //eradicated bug, now player balance increases on win
-                	
+                	 
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, x);
@@ -84,13 +84,13 @@ public class Main
                 }
 		
             
-            System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
+            System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) loseCount/(winCount+loseCount)));
             totalWins += winCount;
             totalLosses += loseCount;
 
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } 
-        System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalWins  / (totalWins + totalLosses))*100)));
+        System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalLosses  / (totalWins + totalLosses)*100))));
                      	}		
 	}

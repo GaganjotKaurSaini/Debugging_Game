@@ -84,13 +84,13 @@ public class Main
                 }
 		
             
-            System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) loseCount/(winCount+loseCount)));
+            System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
             totalWins += winCount;
             totalLosses += loseCount;
 
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } 
-        System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalLosses  / (totalWins + totalLosses)*100))));
+        System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalWins  / (totalWins + totalLosses)*100))));
                      	}		
 	}

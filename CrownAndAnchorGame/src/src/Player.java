@@ -14,11 +14,20 @@ public class Player {
 	Player player = new Player("Fred", 19, 100);
 		
 	//Checking Name and Balance of Player	
-	public Player(String name, int age, int balance) {
+
+	
+	{
+	
+		
+}
+	public Player(String name, int age, int balance)
+	{
+
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
 		
 		//Under 18 cannot play this game
+		
 		if(age < 18) throw new IllegalArgumentException("Under 18 should not play the game");
 		this.name = name;
 		this.balance = balance;
@@ -55,7 +64,7 @@ public class Player {
 	public boolean balanceExceedsLimitBy(int amount) 
 	{
 		//Eradicated bug 2 now player reach to betting limit, game ends when balance goes 0
-		return (balance - amount >= limit);  
+		return (balance - amount > limit);  
 	}
 	
 	public void takeBet(int bet) {

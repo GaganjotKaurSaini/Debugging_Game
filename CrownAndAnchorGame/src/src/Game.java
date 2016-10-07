@@ -21,7 +21,8 @@ public class Game {
 		values = new ArrayList<DiceValue>();
 	}
 
-	public List<DiceValue> getDiceValues() {
+	public List<DiceValue> getDiceValues() 
+	{
 		values.clear();
 		for (Dice d : dice) {
 			values.add(d.getValue());

@@ -41,7 +41,7 @@ public class Game {
 			d.roll();
 			if (d.getValue().equals(pick)) { 
 				matches += 1;
-	      }				
+			}				
 		}
 		
 	 int winnings = matches * (bet * matches);
@@ -49,6 +49,8 @@ public class Game {
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
 		}
-        return winnings;		
+        return winnings;	
+        
+        
 	}
 }

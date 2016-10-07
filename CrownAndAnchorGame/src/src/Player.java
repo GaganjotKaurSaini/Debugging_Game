@@ -1,9 +1,17 @@
+import java.util.List;
+
 public class Player {
 	private String name;
 	private int balance;
 	private int winnings;
 	private int limit;
 	private int age;
+	private int bet;
+	
+	private List<Dice> dice;
+	private List<DiceValue> values;
+	
+	Player player = new Player("Fred", 19, 100);
 		
 	//Checking Name and Balance of Player	
 	public Player(String name, int age, int balance) {
@@ -64,7 +72,11 @@ public class Player {
 	public void winCounts(float totalWinCounts)
 	{	
 		if (totalWinCounts >= 0.42) throw new IllegalArgumentException("Limit reached.");
-		balance = balance + winnings ;
+		player.takeBet(bet);
+		Dice d = null;
+		d.getValue().equals(null);
+		
+		//balance = balance + winnings;
 	}
 	public String toString() {
 		return String.format("Player: %s, Balance: %d, Limit: %d", name, balance, limit);

@@ -15,7 +15,7 @@ public class Main
         Dice d5 = new Dice();
         Dice d6 = new Dice();*/
 
-        Player player = new Player("Fred", 19, 100);
+        Player player = new Player("Fred", 10, 100);
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
@@ -31,7 +31,7 @@ public class Main
             for (int i = 0; i < 100; i++)
             {
             	String name = "Fred";
-            	int age = 19;
+            	int age = 10;
             	int balance = 100;
             	int limit = 0;
                 player = new Player(name, age, balance);
@@ -43,7 +43,7 @@ public class Main
                 		player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
-                while (player.balanceExceedsLimitBy(bet) && player.getBalance() <= 100)// Eradicated bug sets the limit 100
+                while (player.balanceExceedsLimitBy(0) && player.getBalance() <= 100)// Eradicated bug sets the limit 100
                 {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
@@ -61,7 +61,7 @@ public class Main
                                       
                     if (winnings > 0)
                     {                 	 
-                	 int x = bet + winnings + player.getBalance(); //eradicated bug, now player balance increases  wins
+                	 int x = bet  + player.getBalance(); //eradicated bug, now player balance increases  wins
                     	
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, x);
@@ -87,6 +87,11 @@ public class Main
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } 
+        if ((float)((totalWins  / (totalWins + totalLosses))*100) >= 0.42)
+        {
+        	System.out.println("(win+lose) ratio should approximately equal 0.42. This does not appear to be the case.");
+        }
+        else
         System.out.println(String.format("Overall win rate = %.1f%%", (float)((totalWins  / (totalWins + totalLosses))*100)));
       }		
 	}

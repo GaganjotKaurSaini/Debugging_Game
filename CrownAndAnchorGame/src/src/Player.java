@@ -24,7 +24,7 @@ public class Player {
 	{
 
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");// condition for name cant be null
-		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
+		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");// condition balance cannot be negative
 		
 		//Under 18 cannot play this game
 		

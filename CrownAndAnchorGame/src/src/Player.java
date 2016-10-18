@@ -37,7 +37,7 @@ public class Player {
 	//Returning Name, age, Balance and limit of player
 		
 	public String getName() { 
-		return name; }
+		return name; }//getter method for name
 	
 	public int age() { 
 		return age; }	

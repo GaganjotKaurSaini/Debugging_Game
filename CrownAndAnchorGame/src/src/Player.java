@@ -43,7 +43,7 @@ public class Player {
 		return age; }	//getter methodfor age
 	
 	public int getBalance() { 
-		return balance; }
+		return balance; }//getter method for balance
 	
 	public int getWinnings() {
 		return winnings; }

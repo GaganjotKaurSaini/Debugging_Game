@@ -32,7 +32,7 @@ public class Player {
 		this.name = name;//using local variable
 		this.balance = balance;// uisng local variable for balnce
 		this.limit = 0;// setting limit to 0
-		this.age=age;      //testing
+		this.age=age;      //using local variable for age
 		}	
 	//Returning Name, age, Balance and limit of player
 		

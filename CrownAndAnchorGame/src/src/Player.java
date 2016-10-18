@@ -11,7 +11,7 @@ public class Player {
 	private List<Dice> dice;
 	private List<DiceValue> values;
 	
-	Player player = new Player("Fred", 19, 100);
+	Player player = new Player("Fred", 19, 100);//giving inputs
 		
 	//Checking Name and Balance of Player	
 

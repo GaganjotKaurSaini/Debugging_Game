@@ -40,7 +40,7 @@ public class Player {
 		return name; }//getter method for name
 	
 	public int age() { 
-		return age; }	
+		return age; }	//getter methodfor age
 	
 	public int getBalance() { 
 		return balance; }

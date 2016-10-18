@@ -29,7 +29,7 @@ public class Player {
 		//Under 18 cannot play this game
 		
 		if(age < 18) throw new IllegalArgumentException("Under 18 should not play the game");// condition age cannot be less than 18
-		this.name = name;
+		this.name = name;//using local variable
 		this.balance = balance;
 		this.limit = 0;
 		this.age=age;      //testing

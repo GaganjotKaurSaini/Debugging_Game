@@ -46,7 +46,7 @@ public class Player {
 		return balance; }//getter method for balance
 	
 	public int getWinnings() {
-		return winnings; }
+		return winnings; }//getter method for winnings
 	
 	public int getLimit() { 
 		return limit; }
